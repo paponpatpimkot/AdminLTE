@@ -1,11 +1,11 @@
 <?php
-
-session_start();
-
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "it68-2";
+$dbname = "it68-1";
 
 $con = mysqli_connect($host, $user, $pass, $dbname);
 
